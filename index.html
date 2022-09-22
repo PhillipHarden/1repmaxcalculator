@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links style sheet from downloaded Bootstrap files -->
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/css/bootstrap.css">
+
+    <!-- Links JavaScript from downloaded Bootstrap files -->
+    <script src="bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+
+    <!-- icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- My Style Sheet -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- My JavaScript files -->
+    <script src="js/app.js" defer></script>
+    <script src="js/controller.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/utility.js"></script>
+
+    <!-- favicon : https://favicon.io/emoji-favicons/flexed-biceps -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Spirit Phild Fitness | 1 Rep Max</title>
+</head>
+
+<body>
+    <header class="mb-5">
+        <div class="container">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Harden Fitness</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic"
+                        aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarBasic">
+                        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://legionathletics.com/tools/1rm-calculator/?fbclid=IwAR1CrIv5QqsW8R1Vt5F08fs7svCr1SGLiuAx5Bc5ZgxhuCKdn4WhT9BpTMc">Inspiration</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h1 class="text-center mb-5">One-Rep Max Calculator</h1>
+                <p>A one-rep max (1RM) is the maximum amount of weight you can lift for a single repetition of a given
+                    exercise through a full range of motion with proper technique. The easiest way to calculate your
+                    one-rep
+                    max is to review your training log, find the most weight you've lifted on an exercise for 3 to 6
+                    reps,
+                    and plug in the weight and reps into the Legion One-Rep Max Calculator. By tracking your one-rep max
+                    over time, you can ensure you're gaining muscle and strength effectively.</p>
+            </div>
+
+            <!-- Selectors div -->
+            <div>
+                <div class="top">
+                    <div class="weight-select-wrap">
+                        <div>
+                            <label for="weight-select">Weight</label>
+                            <input name="weight" id="weight-select" type="number" min="0" max="500" value="180">
+                        </div>
+                    </div>
+                    <div class="system-select-wrap">
+                        <div class="select">
+                            <select name="system">
+                                <option value="lb" selected="selected">lb</option>
+                                <option value="kg">kg</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="reps-select-wrap">
+                        <label for="reps-select">Reps</label>
+                        <input name="reps" id="reps-select" type="number" min="1" max="20" value="10">
+                    </div>
+                </div>
+                <div class="bottom test">
+                    <div>
+                        <label class="block-label"> "Your one-rep max is "
+                            <span id="orm_max">240 lb</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <div>
+                        <div>
+                            <!-- <table class="percentages-table" border="1" cellspacing="0" cellpadding="2"> -->
+                            <table class="percentages-table">
+                            <tbody>
+                                <tr class="bb header-row">
+                                    <th>% of 1RM</th>
+                                    <th>Weight</th>
+                                    <th>Estimated reps</th>
+                                </tr>
+                                <tr class="bb">
+                                    <td>100%</td>
+                                    <td class="orm-max orm_value">240 lb</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>95%</td>
+                                    <td class="orm_95 orm_value">228 lb</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>93%</td>
+                                    <td class="orm_93 orm_value">223 lb</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>90%</td>
+                                    <td class="orm_90 orm_value">216 lb</td>
+                                    <td>4</td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>87%</td>
+                                    <td class="orm_87 orm_value">209 lb</td>
+                                    <td>5</td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>85%</td>
+                                    <td class="orm_85 orm_value">204 lb</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>83%</td>
+                                    <td class="orm_83 orm_value">199 lb</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>80%</td>
+                                    <td class="orm_80 orm_value">192 lb</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>77%</td>
+                                    <td class="orm_77 orm_value">185 lb</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>75%</td>
+                                    <td class="orm_75 orm_value">180 lb</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>73%</td>
+                                    <td class="orm_73 orm_value">175 lb</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr class="bb">
+                                    <td>70%</td>
+                                    <td class="orm_70 orm_value">168 lb</td>
+                                    <td>12</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </main>
+    <footer class="container mt-5">
+        <p class="small">Harden Fitness &copy; 2022</p>
+    </footer>
+
+</body>
+
+</html>
